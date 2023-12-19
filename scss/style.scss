@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+$darkblue:#041735;
+$gray:#656565;
+$cardscolor:#F0F3FF;
+
+
+
+section{
+    width: 100%;
+    .section-center{
+        width: 100%;
+        padding: 70px;
+        // background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 80px;
+        .top{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            h1{
+                font-size: 40px;
+                color: $darkblue;
+                width: 60%;
+            }
+            p{
+                font-size: 25px;
+                color: $gray;
+            }
+        }
+        .bottom{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3 ,auto);
+            gap: 50px;
+            .cards{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: $cardscolor;
+                padding: 70px 0px;
+                gap: 30px;
+                text-align: center;
+                h3{
+                    font-size: 22px;
+                    color: $darkblue;
+                }
+                img{
+                    width: 70px;
+                }
+                p{
+                    font-size: 19px;
+                    color: $gray;                }
+            }
+        }
+    }   
+}
+
+
+@media screen and (max-width:992px){
+    section .section-center {
+        .top {
+            h1{
+                font-size: 30px;
+                width: 100%;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        .bottom{
+            grid-template-columns: repeat(2 , auto);
+        }
+    }
+}
+
+@media screen and (max-width:576px){
+    section .section-center .bottom{
+        grid-template-columns: repeat(1 , auto);
+    }
+}
