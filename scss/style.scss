@@ -1,19 +1,22 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;  
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-$darkblue:#041735;
-$gray:#656565;
-$cardscolor:#F0F3FF;
+$darkblue: #041735;
+$gray: #656565;
+$cardscolor1: #F0F3FF;
+$cardscolor2: #FFF3F2;
+$cardscolor3: #E9FFFD;
 
 
 
-section{
+section {
     width: 100%;
-    .section-center{
+
+    .section-center {
         width: 100%;
         padding: 70px;
         // background-color: antiquewhite;
@@ -21,8 +24,9 @@ section{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 80px;
-        .top{
+        gap: 70px;
+
+        .top {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -30,66 +34,126 @@ section{
             flex-direction: column;
             gap: 20px;
             text-align: center;
-            h1{
+
+            h1 {
                 font-size: 40px;
                 color: $darkblue;
                 width: 60%;
             }
-            p{
+
+            p {
                 font-size: 25px;
                 color: $gray;
             }
         }
-        .bottom{
+
+        .bottom {
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(3 ,auto);
+            grid-template-columns: repeat(3, auto);
             gap: 50px;
-            .cards{
+
+            .cards {
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                background-color: $cardscolor;
                 padding: 70px 0px;
                 gap: 30px;
                 text-align: center;
-                h3{
+                border-radius: 5px;
+                position: relative;
+                background-color: $cardscolor1;
+
+                h3 {
                     font-size: 22px;
                     color: $darkblue;
                 }
-                img{
+
+                img {
                     width: 70px;
                 }
-                p{
+
+                p {
                     font-size: 19px;
-                    color: $gray;                }
+                    color: $gray;
+                }
+                .bi{
+                    position: absolute;
+                    top: 10px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 0.7;
+                        transition: all 0.5s ease;
+                        scale: 0.9;
+                    }
+                }
+                .delete{
+                    left: 10px;
+                    color: red;
+                }
+                .update{
+                    left: 40px;
+                    color: green;
+                }
+                .heart{
+                    right: 10px;
+                }
+            }
+
+            .card1 {
+                background-color: $cardscolor1;
+            }
+
+            .card2 {
+                background-color: $cardscolor2;
+            }
+
+            .card3 {
+                background-color: $cardscolor3;
             }
         }
-    }   
-}
 
+        #loadMore {
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            background-color: $darkblue;
+            color: white;
+            font-size: 20px;
 
-@media screen and (max-width:992px){
-    section .section-center {
-        .top {
-            h1{
-                font-size: 30px;
-                width: 100%;
+            &:hover {
+                opacity: 0.9;
+                transition: all 0.5s ease;
             }
-            p{
-                font-size: 20px;
-            }
-        }
-        .bottom{
-            grid-template-columns: repeat(2 , auto);
         }
     }
 }
 
-@media screen and (max-width:576px){
-    section .section-center .bottom{
-        grid-template-columns: repeat(1 , auto);
+
+@media screen and (max-width:992px) {
+    section .section-center {
+        .top {
+            h1 {
+                font-size: 30px;
+                width: 100%;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .bottom {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    section .section-center .bottom {
+        grid-template-columns: repeat(1, auto);
     }
 }
