@@ -131,6 +131,56 @@ section {
         }
     }
 }
+// --------------------------modal-------------------
+.modal{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0 , 0 , 0 , 0.7);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    #modal{
+        box-shadow: 0 0 10px 0 snow;
+        padding: 100px;
+        
+    }  
+}
+
+// ----------------------- update -----------------------
+
+#modal-card{
+    background-color: white;
+    box-shadow: 0 0 10px 0 snow;                    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:100px  70px;
+    gap: 30px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    background-color: $cardscolor1;
+
+    h3 {
+        font-size: 22px;
+        color: $darkblue;
+    }
+
+    img {
+        width: 70px;
+    }
+
+    p {
+        font-size: 19px;
+        color: $gray;
+    }
+    
+}
 
 
 @media screen and (max-width:992px) {

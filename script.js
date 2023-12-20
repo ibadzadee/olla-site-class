@@ -15,7 +15,7 @@ function showData() {
                 <img src="${element.image}" alt="">
                 <p>${element.description}</p>
                 <i class="bi bi-trash3-fill delete" onclick="deleteElement(${element.id})"></i>
-                <i class="bi bi-pencil-square update"></i>
+                <i class="bi bi-pencil-square update" onclick="update(${element.id})"></i>
                 <i class="bi bi-heart-fill heart"></i>
             </div>
             `;
@@ -35,3 +35,29 @@ function deleteElement(id) {
   axios.delete(url+id);
   window.location.reload();
 }
+
+// --------------------- update.js ----------------------
+
+const modal = document.querySelector(".modal");
+// const updateBtn = document.querySelector(".update");
+// updateBtn.addEventListener("click" , ()=>{
+//   modal.style.display ="block"
+// })
+function update(id){
+  modal.innerHTML=""
+  modal.style.display ="flex";
+  // fetch(url+id)
+  // .then(res => res.json())
+  // .then(data=>
+  //   modal.innerHTML+=`
+  //   value="${data.name}"
+  //   `
+    // )
+}
+
+window.addEventListener("keyup" , (e)=>{
+  if(e.key==="Enter"){
+    modal.style.display = "none"
+  }
+})
+// console.log(modal);

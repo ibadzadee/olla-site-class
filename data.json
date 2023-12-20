@@ -17,6 +17,18 @@
       "name": "Responsive Design",
       "image": "./img/services3.svg",
       "description": "Combine sections from Olla's vast component library and create beautiful."
+    },
+    {
+      "id": 4,
+      "name": "Unlimited Compnents",
+      "image": "./img/services1.svg",
+      "description": "Combine sections from Olla's vast component library and create beautiful."
+    },
+    {
+      "id": 5,
+      "name": "Awesome Support",
+      "image": "./img/services2.svg",
+      "description": "Combine sections from Olla's vast component library and create beautiful."
     }
   ]
 }
